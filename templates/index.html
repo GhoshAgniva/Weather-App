@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Weather App</title>
+</head>
+<body>
+    <h1>Weather APP</h1>
+
+<div class="inputs">
+    <form action="/" method = "POST">
+        <input type="text" id = "cityname"  name = "cityname"  placeholder = "City">
+        <input type="text" id = "statename"  name = "statename"  placeholder = "State">
+        <input type="text" id = "countryname"  name = "countryname"  value = "India">
+        <button>See Weather</button>
+    </form>
+    {% if data %}
+    {{ data.main }}: {{ data.description }}<br>
+    {{ data.temperature }}:  <img src="https://openweathermap.org/img/wn/{{data.icon}}@2x.png" alt="">
+    {% endif %}
+
+</div>
+</body>
+</html>
